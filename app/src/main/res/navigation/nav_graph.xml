@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moodEntryFragment">
+
+    <fragment
+        android:id="@+id/moodEntryFragment"
+        android:name="com.example.moodtracker.fragments.MoodEntryFragment"
+        android:label="Dodaj nastrój"
+        tools:layout="@layout/fragment_mood_entry">
+        <action
+            android:id="@+id/action_moodEntryFragment_to_moodHistoryFragment"
+            app:destination="@id/moodHistoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moodHistoryFragment"
+        android:name="MoodHistoryFragment"
+        android:label="Historia nastrojów"
+        tools:layout="@layout/fragment_mood_history" />
+</navigation>

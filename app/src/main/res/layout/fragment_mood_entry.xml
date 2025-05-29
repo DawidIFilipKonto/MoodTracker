@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <!-- Nagłówek -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jak się dziś czujesz?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Wybór nastroju -->
+    <RadioGroup
+        android:id="@+id/moodRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/happyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wesoły"
+            android:layout_marginRight="8dp"/>
+
+        <RadioButton
+            android:id="@+id/averageRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Przeciętny"
+            android:layout_marginRight="8dp"/>
+
+        <RadioButton
+            android:id="@+id/sadRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smutny"/>
+    </RadioGroup>
+
+    <!-- Notatka -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Co się dziś wydarzyło?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/noteEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Opisz swój dzień..."
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Kategoria -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategoria wydarzenia:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Checkboxy -->
+    <CheckBox
+        android:id="@+id/sleptWellCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dzisiaj spałem dobrze"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Ocena dnia -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ocena dnia (1-5):"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="1"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Switch -->
+    <Switch
+        android:id="@+id/importantSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To ważny dzień"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Przycisk zapisu -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ZAPISZ NASTRÓJ"
+        android:textColor="@android:color/white"/>
+</LinearLayout>
